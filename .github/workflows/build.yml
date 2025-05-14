@@ -1,7 +1,11 @@
 name: Build
 
-on:
-  push:
+on:  
+  push:  
+    branches:  
+      - main
+  repository_dispatch:
+    types: [contract_requiring_verification_published] 
   workflow_dispatch:
 
 env:
